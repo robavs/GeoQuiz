@@ -44,7 +44,7 @@ input.addEventListener('input',function(){
 })
 
 let time_box = document.createElement('div'),
-    time_in_seconds = page_name=='europe' || page_name=='asia' || page_name=='africa' ? 5 : 120,
+    time_in_seconds = page_name=='europe' || page_name=='asia' || page_name=='africa' ? 300 : 120,
     started_time = time_in_seconds
 time_box.innerHTML = `Your time is ${time_in_seconds/60}:00`
 document.body.append(time_box)
