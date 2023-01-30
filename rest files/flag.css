@@ -1,0 +1,507 @@
+body{
+    margin:0;
+    padding:0;
+    font-family:Arial, Helvetica, sans-serif;
+    background:rgb(0, 110, 46);
+    overflow: hidden;
+}
+h1{
+    text-align:center;
+    color:white;
+    font-size:4vh;
+}
+h2{
+    color:rgb(255, 255, 255);
+    text-align:center;
+    font-weight:bold;
+    font-size:3vh
+}
+#back{
+    color:white;
+    height:30px;
+    width:30px;
+    font-size: 25px;
+    position: absolute;
+    top:1%;
+    left:1%;
+    cursor:pointer;
+}
+.first{
+    margin-top:6vh
+}
+.second{
+    margin-top:20vh
+}
+.third{
+    margin-top:25vh
+}
+.checkbox_container{
+    height:42vh;
+    width:90vw;
+    position: absolute;
+    left:10%;
+    transform:translateX(-50%);
+    display: flex;
+    margin-top:5vh
+}
+.checkbox_container input[type='checkbox']{
+    width:2.6vh;
+    height:2.6vh;
+    cursor:pointer;
+}
+.checkbox_label{
+    position: relative;
+    height:auto;
+    flex-grow:1;
+    left:50%;
+    transform:translateX(-20%)
+}
+.checkbox_label label{
+    position: absolute;
+    margin-left:1.5vh;
+    font-size:2.8vh;
+    margin-top:2.0px
+}
+.input_container{
+    width:auto;
+    position:absolute;
+    left:50%;
+    transform:translateX(-50%);
+    display:flex;
+    margin-top:5vh;
+    padding-right:5vw;
+}
+label{
+    color:white;
+    cursor: pointer;
+}
+input[type='radio']{
+    margin-left:5vw;
+    margin-bottom:3.5vh;
+    width:2vh;
+    height:2vh;
+    visibility: hidden;
+}
+input[type='radio']:after {
+    width:2vh;
+    height:2vh;
+    border-radius: 50%;
+    background-color: white;
+    cursor: pointer;
+    content: '';
+    display: inline-block;
+    visibility: visible;
+    border: 3px solid white;
+}
+input[type='radio']:checked:after {
+    width:2vh;
+    height:2vh;
+    border-radius: 50%;
+    background-color: rgb(30,144,255);
+    content: '';
+    display: inline-block;
+    cursor: pointer;
+    visibility: visible;
+    border: 3px solid white;
+}
+.radio_label{
+    flex-grow:1; 
+}
+.radio_label label{
+    margin-left:5vw;
+    font-size:3.0vh
+}
+.radio_label:first-child label{
+    margin-left:5.3vw;
+}
+.start_quiz_btn{
+    text-align:center;
+    cursor: pointer;
+    margin-top:24vh;
+    font-size:3.5vh;
+    color:white;
+    letter-spacing: 0.5vw;
+}
+select{
+    position: absolute;
+    left:50%;
+    transform:translateX(-50%);
+    cursor:pointer;
+    margin-top:50px;
+    width:60px;
+    height:30px;
+    font-size:20px
+}
+.questions_div{
+    position: absolute;
+    left:50%;
+    transform: translateX(-50%);
+    top:14vh;
+    display:flex;
+}
+.question{
+    position: relative;
+    background-color:white;
+    text-align: center;
+}
+.choosen_option{
+    color:white;
+    font-size:3vh;
+    text-align: center;
+    margin-top:23vh;
+}
+.new_question{
+    color:white;
+    font-size:3vh;
+    text-align:center;
+    margin-top: 10vh;
+}
+.your_answer{
+    position:fixed;
+    left:50%;
+    transform:translateX(-50%);
+    width:170px;
+    height:35px;
+    border-radius:10px;
+    font-size:1.2em;
+    margin-top:7vh;
+    text-transform: capitalize;
+    border:1.5px solid grey;
+}
+.checking_answer_btn{
+    position: absolute;
+    left:50%;
+    width:130px;
+    height:35px;
+    line-height:35px;
+    text-align:center;
+    border:1.5px solid grey;
+    margin-top: 28vh;
+    transform:translateX(-50%);
+    border-radius: 10px;
+    cursor:pointer;
+    font-size:1.2em;
+    background:darkorange;
+    border:2px solid darkorange;
+    color:white;
+    font-weight: bold;
+}
+.current_question{
+   opacity:0.5
+}
+.correct_question{
+    background-color:darkgreen;
+    color:white;
+    font-weight:bold;
+    opacity:1
+}
+.incorrect_question{
+    background-color:darkred;
+    color:white;
+    font-weight:bold;
+    opacity:1
+}
+.option_container{
+    height:50px;
+    width:auto;
+    display:flex;
+    position: fixed;
+    left:50%;
+    transform: translateX(-50%);
+    margin-top:12vh;
+}
+.option{
+    width:auto;
+    height:15vh;
+    display: flex;
+    margin-left:2.5vw ;
+    font-size:2.8vh;
+    margin-top:3vh;
+    cursor: pointer;
+}
+.box{
+    position:absolute;
+    width:35vw;
+    height:auto;
+    padding-bottom:30px;
+    background:rgb(152, 0, 212);
+    left:50%;
+    transform:translateX(-50%);
+    top:20%;
+    z-index:2;
+    border-radius:10px
+}
+.paragraph_box{
+    color:white;
+    font-weight:bold;
+    text-align:center;
+    font-size: 4vh;
+    margin-top:25px
+}
+.reload_btn{
+    position: relative;
+    left:50%;
+    transform: translateX(-50%);
+    width:7vw;
+    height:4vh;
+    border:1.5px solid rgb(30,144,255);
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 2.8vh;
+    background-color:rgb(30,144,255);
+    color:white;
+    font-weight: bold;
+}
+@media only screen and (orientation:landscape) and (min-width:540px) and (max-width:850px){
+    h1{
+        margin-top:2vh;
+        font-size:6vh;
+    }
+    h2{
+        font-size:5vh
+    }
+    .first{
+        margin-top:4vh
+    }
+    .second{
+        margin-top:20vh
+    }
+    .third{
+        margin-top:22vh
+    }
+    select{
+        width:50px;
+        height:20px;
+        font-size:15px;
+        margin-top:10px
+    }
+    .checkbox_container{
+        margin-top:0
+    }
+    .checkbox_container input[type='checkbox']{
+        width:3.6vh;
+        height:3.6vh;
+    }
+    .checkbox_label label{
+        margin-left:0.6vw;
+        font-size:4vh;
+        display:block;
+    }
+    .input_container{
+        margin-top:-0.5vh;
+    }
+    input[type='radio']{
+        margin-bottom:5.5vh
+    }
+    input[type='radio']:after {
+        width:2.4vh;
+        height:2.4vh
+    }
+    input[type='radio']:checked:after {
+        width:2.4vh;
+        height:2.4vh;
+    }
+    .radio_label label{
+        margin-left:5vw;
+        font-size:4vh;
+    }
+    .radio_label:first-child label{
+        margin-left:5.5vw;
+    }
+    .start_quiz_btn{
+        margin-top:20vh;
+        font-size:5vh;
+    }
+    .choosen_option{
+        font-size:4vh;
+        margin-top:20vh;
+    }
+    .new_question{
+        font-size:4vh;
+        margin-top: 10vh;
+    }
+    .your_answer{
+        width:150px;
+        height:30px;
+        border-radius:10px;
+        font-size:15px;
+        margin-top:7vh;
+    }
+    .checking_answer_btn{
+        width:70px;
+        height:20px;
+        border-radius:5px;
+        line-height:20px;
+        border:1.5px solid grey;
+        margin-top: 28vh;
+        font-size:15px;
+    }
+}
+@media only screen and (orientation:portrait) and (max-width:650px){
+    .checkbox_container{
+        display: block;
+        left:52.5%;
+        margin-top:-2.5vh
+    }
+    .checkbox_label label{
+        position: absolute;
+        margin-left:2.5vh;
+        font-size:2.8vh;
+        margin-top:2.9vh
+    }
+    .checkbox_container input[type='checkbox']{
+        margin-top:3vh;
+    }
+    select{
+        margin-top:25px;
+        width:50px;
+        height:25px;
+        font-size:20px;
+    }
+    .first{
+        margin-top:2vh
+    }
+    .second{
+        margin-top:46.5vh
+    }
+    .third{
+        margin-top:14vh
+    }
+    .input_container{
+        margin-top:1vh;
+    }
+    .start_quiz_btn{
+        margin-top:14vh;
+        font-size: 4vh;
+    }
+    .questions_div{
+        left:9%;
+        transform: translateX(-50%);
+        top:12vh;
+        flex-direction:column;
+    }
+    .choosen_option{
+        margin-top:2vh;
+    }
+    .new_question{
+        margin-top: 5vh;
+    }
+    .your_answer{
+        width:45vw;
+        height:5vh;
+        border-radius:10px;
+        font-size:1.2em;
+        margin-top:7vh;
+    }
+    .checking_answer_btn{
+        width:30vw;
+        height:4vh;
+        line-height:4vh;
+        margin-top: 23vh;
+    }
+    .option{
+        width:15vh;
+        height:auto
+    }
+    .option_container{
+        margin-top: -2vh;
+        display:inline-block;
+    }
+    .box{
+        width:85vw;
+    }
+    .paragraph_box{
+        font-size: 3vh;
+        margin-top:25px
+    }
+    .reload_btn{
+        width:20vw;
+        height:4.5vh;
+    }
+}
+@media only screen and (orientation:portrait) and (min-width:651px) and (max-width:1024px){
+    .checkbox_container{
+        display: block;
+        left:57.5%;
+        margin-top:-2.5vh
+    }
+    .checkbox_label label{
+        position: absolute;
+        margin-left:2.5vh;
+        font-size:2.8vh;
+        margin-top:2.7vh
+    }
+    .checkbox_container input[type='checkbox']{
+        margin-top:2.8vh;
+    }
+    select{
+        width:80px;
+        height:40px;
+        font-size:24px;
+        margin-top:40px
+    }
+    .first{
+        margin-top:2vh
+    }
+    .second{
+        margin-top:43.5vh
+    }
+    .third{
+        margin-top:14vh
+    }
+    .input_container{
+        margin-top:0.5vh;
+    }
+    .start_quiz_btn{
+        margin-top:15.5vh;
+        font-size:4.5vh;
+    }
+    .questions_div{
+        left:9%;
+        transform: translateX(-50%);
+        top:12vh;
+        flex-direction:column;
+    }
+    .choosen_option{
+        font-size:4vh;
+        margin-top:5vh;
+    }
+    .new_question{
+        font-size:4vh;
+        margin-top: 7vh;
+    }
+    .your_answer{
+        width:28vw;
+        height:45px;
+        border-radius:10px;
+        font-size:25px;
+        margin-top:5vh;
+    }
+    .checking_answer_btn{
+        width:20vw;
+        height:35px;
+        line-height:35px;
+        margin-top: 20vh;
+        font-size:25px;
+    }
+    .option{
+        width:13vh;
+        height:auto
+    }
+    .option_container{
+        margin-top: -2vh;
+        display:inline-block;
+    }
+    .box{
+        width:75vw;
+    }
+    .paragraph_box{
+        font-size: 3vh;
+        margin-top:25px
+    }
+    .reload_btn{
+        width:20vw;
+        height:4.5vh;
+    }
+}
+

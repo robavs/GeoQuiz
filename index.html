@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Geografski Kviz</title>
+<link href='main.css' rel='stylesheet'>
+<link href='rest files/images/world-map.png' rel='icon'>
+<meta charset='utf-8'>
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0"">
+</head>
+
+<body>
+    <h1>Kviz</h1>
+
+    <!--                      Menu buttnon                    -->
+    <div class='menu-btn'>
+        <div class='menu-btn__burger'></div>
+    </div>
+
+    <div id='container'>
+        <div class='child' id='child2'
+        onclick='startGame(1)'>
+            <div class='tooltip'>
+                Zastave
+            </div>
+            <div class='tooltip-text'>
+                Pogodi zastavu države
+            </div>
+        </div>
+
+        <div class='child' id='child3'  onclick='startGame(2)'>
+            <div class='tooltip'>
+                Pogodi državu
+            </div>
+            <div class='tooltip-text'>
+                Pogodi državu znajući glavni grad
+            </div>
+        </div>
+
+        <div class='child' id='child4'  onclick='startGame(3)'>
+            <div class='tooltip'>
+                Nauči
+            </div>
+            <div class='tooltip-text'>
+                Nauči i istraži zanimljivosti
+            </div>
+        </div>
+    </div>
+        <span id='creator'>
+            Napravio:<br>
+        </span>
+        <span id='name'></span>
+<script src='main.js'></script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+body{
+   overflow: hidden;
+}
+svg{
+    position: absolute;
+    width:80%;
+    height:100%;
+    right:0%;
+}
+#back{
+    color:black;
+    font-size:25px;
+    position: fixed;
+    top:2%;
+    left:1%;
+    cursor:pointer;
+    text-shadow:  whitesmoke
+}
+.state{
+    fill:#808080;
+    stroke:#FFFFFF;
+    stroke-width:0.25;
+    stroke-miterlimit:10;
+}
+.x{
+    fill:red
+}
+path{
+    cursor: pointer;
+}
+.box{
+    position: absolute;
+    height: 300px;
+    width: 20%;
+    left:1%;
+    top:20%;
+    font-size:20px;
+}
+img{
+    width:17vw
+}
+@media screen and (orientation:portrait){
+    html {
+      transform: rotate(-90deg);
+      transform-origin: left top;
+      width: 100vh;
+      height: 100vw;
+      overflow-x: hidden;
+      position: absolute;
+      top: 100%;
+      left: 0;
+    }
+}

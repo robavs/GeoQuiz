@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Zastave</title>
+    <link href='flag.css' rel='stylesheet'>
+    <meta charset='utf-8'>
+    <link href='images/world-map.png' rel='icon'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+
+<body>    
+    <div class='quiz'>
+        <div class='pre_quiz' data-aos='flip-up'>
+            <div id='back'>←</div>
+            <h1>Pogodi Zastavu</h1>
+            <h2 class='par_question first'>Izaberi kontinente:</h2>
+            <div class='checkbox_container'>
+                <div class='checkbox_label' >
+                        <input type='checkbox' id='north_america' value='S. Amerika'    name='continents'>
+                        <label for='north_america'>S. Amerika</label>
+                </div>
+
+                <div class='checkbox_label' >
+                        <input type='checkbox' id='south_america' value='J. Amerika'    name='continents'>
+                        <label for='south_america'>J. Amerika</label>
+                </div>
+
+                <div class='checkbox_label' >  
+                        <input type='checkbox' id='europe' value='Evropa' name='continents'>
+                        <label for='europe'>Evropa</label>
+                </div>
+
+                <div class='checkbox_label' >   
+                        <input type='checkbox' id='asia' value='Azija' name='continents'>
+                        <label for='asia'>Azija</label>
+                </div>
+
+                <div class='checkbox_label' >
+                        <input type='checkbox' id='africa' value='Afrika' name='continents'>
+                        <label for='africa'>Afrika</label>
+                </div>
+
+                <div class='checkbox_label' >
+                        <input type='checkbox' id='australia' value='Australija'  name='continents'>
+                        <label for='australia'>Australija</label>
+                </div>
+
+                <div class='checkbox_label' >
+                        <input type='checkbox' id='RANDOM' value='Ceo Svet'>
+                        <label for='RANDOM'>Random</label>
+                </div>
+            </div>
+            <h2 class='par_question second'>Izaberi broj pitanja:</h2>
+            <div class='input_container'>
+                <div class='radio_label'>
+                    <input type='radio' value='5' id='5' name='questions'><br>
+                    <label for='5'>5</label>
+                </div>
+
+                <div class='radio_label'>
+                    <input type='radio' value='10' id='10' name='questions'><br>
+                    <label for='10'>10</label>
+                </div>
+
+                <div class='radio_label'>
+                    <input type='radio' value='15' id='15' name='questions'><br>
+                    <label for='15'>15</label>
+                </div>
+
+                <div class='radio_label'>
+                    <input type='radio' value='20' id='20' name='questions'><br>
+                    <label for='20'>20</label>
+                </div>
+            </div>
+            <h2 class='par_question third'>Broj ponuđenih odgovora:</h2>
+
+            <select>
+                <option value='3'>3</option>
+                <option value='4'>4</option>
+                <option value='5'>5</option>
+            </select>
+
+            
+            <p class='start_quiz_btn'>Potvrdi</p>
+        </div>
+    </div>
+
+<script src='flag.js'></script> 
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init({
+        duration:3000
+    });
+</script>
+ 
+</body>
+</html>
