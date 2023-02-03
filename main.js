@@ -1,7 +1,6 @@
 let myName=document.getElementById('name'),
     ime='Aleksa Robavs',
     isFullWord=false,
-    typeSpeed,
     indexName=-1;/*code does not work if semicolon is missed*/
 
 
@@ -23,35 +22,22 @@ menuBtn.addEventListener('click', () => {
   }
 });
 
-(function writeName(){
+function writeName(){
     if(!isFullWord){
-        typeSpeed=400
-        myName.innerHTML=ime.substring(0,++indexName)
-
-        if(indexName>=1) myName.style.borderRight='1px solid grey'
-        if(indexName==6 || indexName==7) myName.style.borderRight='none'
-
-        if(myName.innerHTML.length==13){
-            myName.style.borderRight='none'
-            isFullWord=true
-            typeSpeed=4000
+        myName.innerText = ime.substring(0, indexName++)
+        
+        if(myName.innerText == ime){
+            isFullWord = true
         }
     }
-    else{
-        typeSpeed=200
-        myName.innerHTML=ime.substring(0,--indexName)
-
-        if(indexName<=12) myName.style.borderRight='1px solid grey'
-        if(indexName==0 || indexName==6 || indexName==7) myName.style.borderRight='none'
-
-        if(myName.innerHTML.length==0){
-            isFullWord=false
-            indexName=-1
-            typeSpeed=300
-        }
+    else {
+        myName.innerText = ime.substring(0, indexName--)
+        if(myName.innerText == "")
+            isFullWord = false
     }
-    setTimeout(writeName,typeSpeed)
-})();
+}
+setInterval(writeName, 200);
+
 
 (function change_bg(){
     setInterval(() => {
