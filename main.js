@@ -13,11 +13,10 @@ let menuBtn = document.querySelector('.menu-btn'),
 menuBtn.addEventListener('click', () => {
   if(!menuOpen) {
     menu.style.display='block'
-    menuBtn.classList.add('open')
     menuOpen = true
+    
   } else {
     menu.style.display=''
-    menuBtn.classList.remove('open');
     menuOpen = false;
   }
 });
