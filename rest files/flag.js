@@ -380,7 +380,7 @@ const div_answers = (number_of_question,number_of_flags) => {
         //create function that checks for right answers
         function checking() {
             if (answer_number == number_of_question) {
-                if (this.id == correct_option) {
+                if (this.id == correct_id) {
                     score++
                     question_array[answer_number - 1].classList.add('correct_question')
                 }
