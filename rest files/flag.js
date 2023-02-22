@@ -102,10 +102,10 @@ const quiz = () => {
 
             //prevent to have more answers than number of countries in that continent(australia and south america)
             if (world.length == 1 && (Object.keys(world[0]).length < 15) && (question_number == 20 || question_number == 15)) {
-                div_answers(Object.keys(world[0]).length)
+                div_answers(Object.keys(world[0]).length, number_of_flags)
             }
             else {
-                div_answers(question_number,number_of_flags)
+                div_answers(question_number, number_of_flags)
             }
         }
         else {
